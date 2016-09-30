@@ -39,7 +39,7 @@ describe DockingStation do
       expect {subject.release_bike}.to raise_error ("Oh no! No bikes available!")
     end
     it "should not release a broken bike" do
-      bike = double(:bike, broken?: true)
+      bike = double(:bike, broken?: )
       subject.dock bike
       expect{subject.release_bike}.to raise_error ("Oh no! No bikes available!")
     end
